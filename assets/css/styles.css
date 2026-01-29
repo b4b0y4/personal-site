@@ -368,7 +368,7 @@ main {
   max-width: 800px;
   margin: 0 auto var(--spacing-3xl);
   & h2 {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 }
 
@@ -434,7 +434,7 @@ main {
   text-align: left;
 }
 
-#about {
+#about-wrapper {
   display: grid;
   grid-template-columns: minmax(150px, 0.5fr) 2fr;
   grid-template-rows: auto auto;
@@ -450,45 +450,40 @@ main {
 .about-intro {
   grid-column: 2;
   grid-row: 1;
-}
-
-.about-intro p {
-  color: var(--color-sub);
-  line-height: 1.6;
-  margin-bottom: var(--spacing-sm);
-}
-
-.about-intro p:last-child {
-  margin-bottom: 0;
+  & p {
+    color: var(--color-sub);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-sm);
+  }
+  & p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .about-connect {
   grid-column: 2;
   grid-row: 2;
-}
-
-.about-connect h2 {
-  font-size: 1.2em;
-  margin-bottom: var(--spacing-md);
+  & h2 {
+    font-size: 1.2em;
+    margin-bottom: var(--spacing-md);
+  }
 }
 
 .about-social {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
-}
-
-.about-social a {
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  color: var(--color-sub);
-  transition: color var(--smooth);
-}
-
-.about-social a:hover {
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  color: var(--color-txt);
+  & a {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    color: var(--color-sub);
+    transition: color var(--smooth);
+    &:hover {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      color: var(--color-txt);
+    }
+  }
 }
 
 .blog-posts {
@@ -708,7 +703,7 @@ footer {
     }
   }
 
-  #about {
+  #about-wrapper {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     gap: var(--spacing-md);
