@@ -392,11 +392,6 @@ main {
   transition: z-index 0s 0.3s;
 }
 
-.work-cards .card-link:hover {
-  z-index: 2;
-  transition-delay: 0s;
-}
-
 .work-cards .card {
   padding: 0;
   flex-direction: column-reverse;
@@ -411,10 +406,6 @@ main {
   width: 100%;
   filter: none;
   transition: filter var(--smooth);
-}
-
-.work-cards .card-link:hover img {
-  filter: brightness(0.7);
 }
 
 .work-cards .card .card-text {
@@ -436,6 +427,10 @@ main {
 .work-cards .card h3,
 .work-cards .card .card-teaser {
   text-align: left;
+}
+
+.work-cards .card-link .card-text .card-teaser {
+  color: var(--color-sub);
 }
 
 #about-wrapper {
@@ -508,12 +503,12 @@ footer {
 }
 
 @media (min-width: 769px) {
-  .work-cards .card-link:hover .card-text {
-    transform: translateY(0);
+  .work-cards .card-link:hover img {
+    filter: brightness(0.7);
   }
 
-  .work-cards .card-link .card-text .card-teaser {
-    color: var(--color-sub);
+  .work-cards .card-link:hover .card-text {
+    transform: translateY(0);
   }
 }
 
