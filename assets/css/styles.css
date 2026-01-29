@@ -370,7 +370,7 @@ main {
   max-width: 800px;
   margin: 0 auto var(--spacing-3xl);
   & h2 {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
 }
 
@@ -446,7 +446,7 @@ main {
 .about-title {
   grid-column: 1;
   grid-row: 1 / 3;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 .about-intro {
