@@ -420,12 +420,12 @@ main {
   text-align: left;
 }
 
-.blog-wrapper {
+.column-wrapper {
   display: flex;
   flex-direction: column;
 }
 
-.blog-intro {
+.column-intro {
   max-width: 800px;
   margin: 0 auto var(--spacing-3xl);
   & h2 {
@@ -606,7 +606,7 @@ footer {
     }
   }
 
-  .blog-intro {
+  .column-intro {
     margin: 0 auto var(--spacing-xl);
   }
 
