@@ -449,9 +449,11 @@ main {
 }
 
 .about-title {
-  font-size: 1.5em;
   text-align: center;
   margin-bottom: var(--spacing-3xl);
+  & h2 {
+    font-size: 1.5em;
+  }
 }
 
 .about-intro {
