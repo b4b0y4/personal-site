@@ -204,6 +204,8 @@ main {
   flex: 1;
   padding: var(--spacing-lg) max(var(--spacing-lg), env(safe-area-inset-right))
     var(--spacing-lg) max(var(--spacing-lg), env(safe-area-inset-left));
+  display: flex;
+  align-items: center;
 }
 
 .home-wrapper {
