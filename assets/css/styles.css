@@ -205,6 +205,7 @@ main {
   padding: var(--spacing-lg) max(var(--spacing-lg), env(safe-area-inset-right))
     var(--spacing-lg) max(var(--spacing-lg), env(safe-area-inset-left));
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -361,12 +362,12 @@ main {
   }
 }
 
-.column-wrapper {
+.work-wrapper {
   display: flex;
   flex-direction: column;
 }
 
-.column-intro {
+.work-intro {
   max-width: 800px;
   margin: 0 auto var(--spacing-3xl);
   & h2 {
@@ -438,13 +439,19 @@ main {
 
 #about-wrapper {
   display: flex;
-  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.about-content {
+  width: 100%;
+  max-width: 1000px;
 }
 
 .about-title {
-  width: 300px;
   font-size: 1.5em;
-  white-space: nowrap;
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
 }
 
 .about-intro {
@@ -590,7 +597,8 @@ footer {
     }
   }
 
-  .column-intro {
+  .work-intro,
+  .about-title {
     margin: 0 auto var(--spacing-xl);
   }
 
@@ -632,15 +640,6 @@ footer {
     & .card-teaser {
       text-align: left;
     }
-  }
-
-  #about-wrapper {
-    flex-direction: column;
-    gap: var(--spacing-md);
-  }
-
-  .about-title {
-    width: auto;
   }
 }
 
