@@ -401,6 +401,33 @@
         </div>
       </template>
 
+      <template id="about">
+        <div id="about">
+          <div class="about-title">about me</div>
+          <div class="about-intro">
+            <p>I learned how to code so I could make cool stuff on Ethereum.</p>
+            <p>
+              As a minimalist I believe in living simply and coding simple
+              functional tools with no unnecessary complexity.
+            </p>
+            <p>
+              Let's do things with purpose and integrity. Money is nice but it's
+              not everything...
+            </p>
+          </div>
+          <div class="about-connect">
+            <h2>connect</h2>
+            <div class="about-social">
+              <a href="https://github.com/b4b0y4" target="_blank">GitHub</a>
+              <a href="https://x.com/b4b0y4" target="_blank">Twitter</a>
+              <a href="https://farcaster.xyz/baboya.eth" target="_blank"
+                >Farcaster</a
+              >
+            </div>
+          </div>
+        </div>
+      </template>
+
       <template id="blog">
         <div class="column-wrapper">
           <div class="column-intro">
@@ -526,6 +553,11 @@
         } else {
           showTemplatePage(page);
         }
+        document
+          .querySelectorAll("nav .link a")
+          .forEach((a) =>
+            a.classList.toggle("active", a.hash === `#${page.split("/")[0]}`),
+          );
         scrollTo(0, 0);
       };
       addEventListener("DOMContentLoaded", () => {
