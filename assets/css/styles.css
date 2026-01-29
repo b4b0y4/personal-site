@@ -359,6 +359,19 @@ main {
   }
 }
 
+.column-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-intro {
+  max-width: 800px;
+  margin: 0 auto var(--spacing-3xl);
+  & h2 {
+    font-size: 1.1em;
+  }
+}
+
 .work-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(348px, 1fr));
@@ -419,19 +432,6 @@ main {
 .work-cards .card h3,
 .work-cards .card .card-teaser {
   text-align: left;
-}
-
-.column-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.column-intro {
-  max-width: 800px;
-  margin: 0 auto var(--spacing-3xl);
-  & h2 {
-    font-size: 1.1em;
-  }
 }
 
 #about {
