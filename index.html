@@ -61,7 +61,6 @@
       })();
     </script>
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </head>
 
   <body>
@@ -82,7 +81,6 @@
             <div class="link">
               <a href="#work" data-page="work">work</a>
               <a href="#about" data-page="about">about</a>
-              <a href="#blog" data-page="blog">blog</a>
             </div>
           </nav>
           <button id="theme-btn" aria-label="Toggle theme">
@@ -450,17 +448,6 @@
         </div>
       </template>
 
-      <template id="blog">
-        <div class="column-wrapper">
-          <div class="column-intro">
-            <h2>thoughts on things I remembered to write down &darr;</h2>
-          </div>
-          <div class="blog-posts">
-            <div class="post-list"></div>
-          </div>
-        </div>
-      </template>
-
       <main></main>
 
       <footer>
@@ -472,7 +459,6 @@
     </div>
 
     <script>
-      const postSlugs = ["procrastination"];
       const header = document.querySelector("header"),
         nav = document.querySelector("nav"),
         main = document.querySelector("main"),
@@ -504,60 +490,6 @@
         },
       };
       let lastScroll = scrollY;
-      const parseFrontmatter = (markdown) => {
-        const match = markdown.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
-        const meta = Object.fromEntries(
-          match[1]
-            .split("\n")
-            .filter((l) => l.trim())
-            .map((l) => {
-              const [k, v] = l.split(": ");
-              return [k, v];
-            }),
-        );
-        return { meta, content: match[2] };
-      };
-      const showPost = async (slug) => {
-        if (!postSlugs.includes(slug)) return (location.hash = "blog");
-        try {
-          const markdown = await fetch(`/blog/${slug}.md`).then((r) =>
-            r.ok ? r.text() : Promise.reject(r.statusText),
-          );
-          const { meta, content } = parseFrontmatter(markdown);
-          main.innerHTML = `<article class="blog-post"><h2>${meta.title}</h2><p class="post-date">${meta.date}</p>${marked.parse(content)}<a href="#blog" class="back-link">← Back to posts</a></article>`;
-        } catch (error) {
-          console.error("Failed to fetch post:", error);
-          location.hash = "blog";
-        }
-      };
-      const showBlogIndex = async () => {
-        const blogTemplate = document
-          .getElementById("blog")
-          .content.cloneNode(true);
-        const postList = await Promise.all(
-          postSlugs.map(async (slug) => {
-            try {
-              const markdown = await fetch(`/blog/${slug}.md`).then((r) =>
-                r.ok ? r.text() : Promise.reject(r.statusText),
-              );
-              const { meta } = parseFrontmatter(markdown);
-              return { slug, ...meta };
-            } catch {
-              return null;
-            }
-          }),
-        );
-        blogTemplate.querySelector(".post-list").innerHTML = postList
-          .filter((p) => p)
-          .sort((a, b) => new Date(b.date) - new Date(a.date))
-          .map(
-            (p) =>
-              `<a href="#blog/${p.slug}" class="post-link"><h3>${p.title}</h3><p class="post-date">${p.date}</p></a>`,
-          )
-          .join("");
-        main.innerHTML = "";
-        main.appendChild(blogTemplate);
-      };
       const showTemplatePage = (page) => {
         const template = document.getElementById(page.replace(/\//g, "-"));
         if (template) {
@@ -568,13 +500,7 @@
         }
       };
       const loadPage = async (page = location.hash.slice(1) || "home") => {
-        if (page.startsWith("blog/")) {
-          await showPost(page.substring(5));
-        } else if (page === "blog") {
-          showBlogIndex();
-        } else {
-          showTemplatePage(page);
-        }
+        showTemplatePage(page);
         document
           .querySelectorAll("nav .link a")
           .forEach((a) =>
