@@ -214,6 +214,7 @@ main {
   flex-direction: row;
   justify-content: space-between;
   gap: var(--spacing-xl);
+  width: 100%;
 }
 
 .home-left {
