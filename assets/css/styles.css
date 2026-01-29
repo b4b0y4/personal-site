@@ -370,7 +370,7 @@ main {
 
 .work-intro {
   max-width: 800px;
-  margin: 0 auto var(--spacing-3xl);
+  margin: var(--spacing-xl) auto var(--spacing-3xl);
   & h2 {
     font-size: 1.5em;
   }
@@ -440,18 +440,13 @@ main {
 
 #about-wrapper {
   display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.about-content {
+  flex-direction: column;
   width: 100%;
   max-width: 1000px;
 }
 
 .about-title {
-  text-align: center;
-  margin-bottom: var(--spacing-3xl);
+  margin: var(--spacing-xl) auto var(--spacing-3xl);
   & h2 {
     font-size: 1.5em;
   }
@@ -466,7 +461,7 @@ main {
 }
 
 .about-connect {
-  margin-top: var(--spacing-2xl);
+  margin-top: var(--spacing-md);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -488,13 +483,11 @@ main {
 
 footer {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
+  font-size: 0.8em;
+  color: var(--color-sub);
   padding: var(--spacing-md) max(var(--spacing-lg), env(safe-area-inset-right))
     var(--spacing-md) max(var(--spacing-lg), env(safe-area-inset-left));
-  & p {
-    color: var(--color-sub);
-    font-size: 0.8em;
-  }
   & a {
     color: var(--color-sub);
     text-decoration: none;
@@ -599,11 +592,6 @@ footer {
     & .mobile-arrow {
       display: inline;
     }
-  }
-
-  .work-intro,
-  .about-title {
-    margin: 0 auto var(--spacing-xl);
   }
 
   .card-box {
