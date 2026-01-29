@@ -358,14 +358,14 @@ main {
   }
 }
 
-.archive-cards {
+.work-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(348px, 1fr));
   gap: var(--spacing-md);
 }
 
-.archive-cards .card-link,
-.archive-cards .card-link:last-of-type {
+.work-cards .card-link,
+.work-cards .card-link:last-of-type {
   padding: 0;
   height: 100%;
   border-bottom: none;
@@ -374,12 +374,12 @@ main {
   transition: z-index 0s 0.3s;
 }
 
-.archive-cards .card-link:hover {
+.work-cards .card-link:hover {
   z-index: 2;
   transition-delay: 0s;
 }
 
-.archive-cards .card {
+.work-cards .card {
   padding: 0;
   flex-direction: column-reverse;
   gap: var(--spacing-xs);
@@ -389,17 +389,17 @@ main {
   overflow: hidden;
 }
 
-.archive-cards .card img {
+.work-cards .card img {
   width: 100%;
   filter: none;
   transition: filter var(--smooth);
 }
 
-.archive-cards .card-link:hover img {
+.work-cards .card-link:hover img {
   filter: brightness(0.7);
 }
 
-.archive-cards .card .card-text {
+.work-cards .card .card-text {
   position: absolute;
   z-index: 1;
   bottom: 0;
@@ -411,12 +411,12 @@ main {
   transition: transform var(--smooth);
 }
 
-[data-theme="dark"] .archive-cards .card .card-text {
+[data-theme="dark"] .work-cards .card .card-text {
   background: rgba(16, 16, 16, 0.9);
 }
 
-.archive-cards .card h3,
-.archive-cards .card .card-teaser {
+.work-cards .card h3,
+.work-cards .card .card-teaser {
   text-align: left;
 }
 
@@ -520,11 +520,11 @@ footer {
 }
 
 @media (min-width: 769px) {
-  .archive-cards .card-link:hover .card-text {
+  .work-cards .card-link:hover .card-text {
     transform: translateY(0);
   }
 
-  .archive-cards .card-link .card-text .card-teaser {
+  .work-cards .card-link .card-text .card-teaser {
     color: var(--color-sub);
   }
 }
@@ -627,11 +627,11 @@ footer {
     }
   }
 
-  .archive-cards {
+  .work-cards {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
-  .archive-cards .card {
+  .work-cards .card {
     overflow: visible;
     flex-direction: column-reverse;
     align-items: flex-start;
