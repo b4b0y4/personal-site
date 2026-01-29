@@ -478,6 +478,7 @@ main {
     text-decoration: underline dotted;
     color: var(--color-sub);
     margin-bottom: var(--spacing-sm);
+    transition: var(--smooth);
     &:hover {
       color: var(--color-txt);
     }
