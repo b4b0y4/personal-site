@@ -116,7 +116,6 @@ nav {
       border-radius: 10px;
       transition: width var(--smooth);
     }
-    &:hover::after,
     &.active::after {
       width: 100%;
     }
@@ -370,7 +369,7 @@ main {
 
 .work-intro {
   max-width: 800px;
-  margin: var(--spacing-xl) auto var(--spacing-3xl);
+  margin: var(--spacing-xl) auto 100px;
   & h2 {
     font-size: 1.5em;
   }
@@ -441,7 +440,7 @@ main {
 }
 
 .about-title {
-  margin: 0 auto var(--spacing-3xl);
+  margin: 0 auto 100px;
   & h2 {
     font-size: 1.5em;
   }
@@ -591,6 +590,10 @@ footer {
     }
   }
 
+  .work-intro {
+    margin-bottom: var(--spacing-3xl);
+  }
+
   .work-cards {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
@@ -615,7 +618,7 @@ footer {
   }
 
   .about-title {
-    margin-top: var(--spacing-xl);
+    margin: var(--spacing-xl) auto var(--spacing-3xl);
   }
 }
 
