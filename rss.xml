@@ -6,6 +6,14 @@
   <description>A feed of my projects and thoughts.</description>
 
   <item>
+    <title>ooman</title>
+    <link>https://ooman.wei.limo</link>
+    <description
+      ><![CDATA[<img src="https://ooman.wei.limo/assets/img/ooman.png" alt="ooman Image" width="1600"><br>Rocket Pool staking interface.]]></description>
+    <pubDate>Fri, 20 Jan 2026 08:00:00 GMT</pubDate>
+  </item>
+
+  <item>
     <title>rocket</title>
     <link>https://rocket.baboya.eth.limo</link>
     <description
