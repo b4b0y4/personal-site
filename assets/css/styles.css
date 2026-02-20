@@ -108,7 +108,7 @@ nav {
     &::after {
       content: "";
       position: absolute;
-      bottom: -5px;
+      bottom: -4px;
       left: 0;
       width: 0;
       height: 1.5px;
@@ -371,7 +371,7 @@ main {
   max-width: 800px;
   margin: var(--spacing-xl) auto 100px;
   & h2 {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 }
 
@@ -442,7 +442,7 @@ main {
 .about-title {
   margin: 0 auto 100px;
   & h2 {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 }
 
