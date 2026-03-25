@@ -226,6 +226,7 @@ main {
   & h2 {
     font-size: 1.1em;
     margin-bottom: var(--spacing-xs);
+    color: var(--color-sub);
   }
   & input[type="checkbox"] {
     display: none;
@@ -243,12 +244,8 @@ main {
   position: relative;
   display: inline-block;
   & p {
-    color: var(--color-sub);
     line-height: 1.6;
     display: inline;
-  }
-  & span {
-    color: var(--color-txt);
   }
   &::after {
     display: none;
@@ -260,12 +257,9 @@ main {
   overflow: hidden;
   transition: max-height var(--smooth);
   & p {
-    color: var(--color-sub);
+    color: var(--color-txt);
     line-height: 1.6;
     margin-top: var(--spacing-xs);
-  }
-  & span {
-    color: var(--color-txt);
   }
 }
 
@@ -273,6 +267,7 @@ main {
   & h2 {
     font-size: 1.1em;
     margin-top: var(--spacing-3xl);
+    color: var(--color-sub);
   }
 }
 
@@ -280,20 +275,22 @@ main {
   display: inline-block;
   & a {
     font-size: 0.9em;
-    color: var(--color-sub);
+    color: var(--color-txt);
     display: grid;
     grid-template-columns: 130px 1fr;
     margin-top: var(--spacing-xs);
     text-decoration: none;
-    color: var(--color-sub);
     transition: color var(--smooth);
     & .dot {
       text-decoration-line: underline;
       text-decoration-style: dotted;
     }
-    &:hover {
-      color: var(--color-txt);
-    }
+  }
+  &:hover a {
+    color: var(--color-sub);
+  }
+  &:hover a:hover {
+    color: var(--color-txt);
   }
 }
 
@@ -301,6 +298,7 @@ main {
   & h2 {
     font-size: 1.1em;
     margin-top: var(--spacing-3xl);
+    color: var(--color-sub);
   }
   & .desktop-arrow {
     display: inline;
@@ -327,12 +325,21 @@ main {
     border-bottom: none;
     padding-bottom: 0;
   }
-  &:hover img {
-    filter: grayscale(0);
-  }
-  &:hover .card-teaser {
-    color: var(--color-txt);
-  }
+}
+
+.card-box:hover .card-link img {
+  filter: grayscale(1);
+}
+.card-box:hover .card-link h3,
+.card-box:hover .card-link .card-teaser {
+  color: var(--color-sub);
+}
+.card-box:hover .card-link:hover img {
+  filter: grayscale(0);
+}
+.card-box:hover .card-link:hover h3,
+.card-box:hover .card-link:hover .card-teaser {
+  color: var(--color-txt);
 }
 
 .card {
@@ -346,9 +353,11 @@ main {
   & h3 {
     margin: 2px;
     font-size: 1.1em;
+    color: var(--color-txt);
+    transition: color var(--smooth);
   }
   & .card-teaser {
-    color: var(--color-sub);
+    color: var(--color-txt);
     margin: 2px;
     font-size: 0.9em;
     line-height: 1.6;
@@ -370,6 +379,7 @@ main {
 .work-intro {
   max-width: 800px;
   margin: var(--spacing-xl) auto 100px;
+  color: var(--color-sub);
   & h2 {
     font-size: 1.3em;
   }
@@ -428,10 +438,6 @@ main {
   text-align: left;
 }
 
-.work-cards .card-link .card-text .card-teaser {
-  color: var(--color-sub);
-}
-
 #about-wrapper {
   display: flex;
   flex-direction: column;
@@ -443,12 +449,12 @@ main {
   margin: 0 auto 90px;
   & h2 {
     font-size: 1.3em;
+    color: var(--color-sub);
   }
 }
 
 .about-intro {
   & p {
-    color: var(--color-sub);
     line-height: 1.6;
     margin-bottom: var(--spacing-sm);
   }
