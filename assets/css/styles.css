@@ -8,9 +8,9 @@
 
 :root {
   -webkit-text-size-adjust: 100%;
-  --color-bg: #fffff8;
-  --color-txt: #121212;
-  --color-sub: #707070;
+  --color-bg: #fdfdfc;
+  --color-txt: #111111;
+  --color-sub: #989897;
   --spacing-xs: 10px;
   --spacing-sm: 15px;
   --spacing-md: 20px;
@@ -22,8 +22,8 @@
 }
 
 [data-theme="dark"] {
-  --color-bg: #101010;
-  --color-txt: #b8b8b8;
+  --color-bg: #111111;
+  --color-txt: #fdfdfc;
 }
 
 *,
@@ -111,7 +111,7 @@ nav {
       bottom: -4px;
       left: 0;
       width: 0;
-      height: 1.5px;
+      height: 2px;
       background-color: var(--color-txt);
       border-radius: 10px;
       transition: width var(--smooth);
@@ -521,6 +521,9 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-3xl);
+    & a::after {
+      display: none;
+    }
   }
 
   main {
