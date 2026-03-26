@@ -357,7 +357,7 @@ main {
     transition: color var(--smooth);
   }
   & .card-teaser {
-    color: var(--color-txt);
+    color: var(--color-sub);
     margin: 2px;
     font-size: 0.9em;
     line-height: 1.6;
