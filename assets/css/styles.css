@@ -192,8 +192,8 @@ nav {
   }
 }
 
-[data-selected-theme="light"][data-theme-source="light"] #theme-light,
-[data-selected-theme="dark"][data-theme-source="dark"] #theme-dark,
+[data-theme-source="light"] #theme-light,
+[data-theme-source="dark"] #theme-dark,
 [data-theme-source="system"] #theme-system {
   opacity: 1;
   transform: rotate(0);
@@ -330,15 +330,15 @@ main {
 .home-wrapper .card-box:hover .card-link img {
   filter: grayscale(1);
 }
-.card-box:hover .card-link h3,
-.card-box:hover .card-link .card-teaser {
+.home-wrapper .card-box:hover .card-link h3,
+.home-wrapper .card-box:hover .card-link .card-teaser {
   color: var(--color-sub);
 }
 .home-wrapper .card-box:hover .card-link:hover img {
   filter: grayscale(0);
 }
-.card-box:hover .card-link:hover h3,
-.card-box:hover .card-link:hover .card-teaser {
+.home-wrapper .card-box:hover .card-link:hover h3,
+.home-wrapper .card-box:hover .card-link:hover .card-teaser {
   color: var(--color-txt);
 }
 
@@ -483,7 +483,7 @@ footer {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .work-cards .card-link:hover img {
     filter: brightness(0.7);
   }
