@@ -458,20 +458,22 @@ footer {
   color: var(--color-sub);
   padding: var(--spacing-md) max(var(--spacing-lg), env(safe-area-inset-right))
     var(--spacing-md) max(var(--spacing-lg), env(safe-area-inset-left));
-  & a {
-    color: var(--color-sub);
-    text-decoration: none;
-    transition: color var(--smooth);
-    &:hover {
-      color: var(--color-txt);
-    }
-  }
 }
 
 .footer-social {
   display: flex;
   align-items: center;
   gap: var(--spacing-xs);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  color: var(--color-sub);
+  transition: color var(--smooth);
+  &:hover {
+    color: var(--color-txt);
+  }
 }
 
 @media (max-width: 900px) {
